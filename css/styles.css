@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+}
+
 :root{
     --primary: #C5EBAA;
     --secondary: #FFBE98;
