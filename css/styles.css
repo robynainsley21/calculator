@@ -3,6 +3,7 @@
 *::after{
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
 }
 
 :root{
@@ -64,4 +65,11 @@ body{
 
 .last-button{
  background-color: var(--complimentary);
+=======
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    display: none;
+>>>>>>> 2f79e75b6b4ab2ebc4de46365dc43d4b33554d15
 }
