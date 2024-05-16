@@ -16,33 +16,33 @@
         <button class="row1-button">AC</button>
         <button class="row1-button">(</button>
         <button class="row1-button">)</button>
-        <button class="row1-button" data-modulus>%</button>
-        <button class="row1-button" data-divide>/</button>
+        <button class="row1-button" value="%" data-op>%</button>
+        <button class="row1-button" value="/" data-op>/</button>
       </div>
       <div class="num-operators">
         <div class="row2">
-            <button onclick="display('7')">7</button>
-            <button onclick="display('8')">8</button>
-            <button onclick="display('9')">9</button>
-            <button class="last-button" data-multiply>*</button>
+            <button onclick="display('7')" value="7" number>7</button>
+            <button onclick="display('8')" value="8" number>8</button>
+            <button onclick="display('9')" value="9" number>9</button>
+            <button class="last-button" value="*" data-op>*</button>
           </div>
           <div class="row3">
-            <button onclick="display('4')">4</button>
-            <button onclick="display('5')">5</button>
-            <button onclick="display('6')">6</button>
-            <button class="last-button" data-subtract>-</button>
+            <button onclick="display('4')" value="4" number>4</button>
+            <button onclick="display('5')" value="5" number>5</button>
+            <button onclick="display('6')" value="6" number>6</button>
+            <button class="last-button" value="-" data-op>-</button>
           </div>
           <div class="row4">
-            <button onclick="display('1')">1</button>
-            <button onclick="display('2')">2</button>
-            <button onclick="display('3')">3</button>
-            <button class="last-button" data-add>+</button>
+            <button onclick="display('1')" value="1" number>1</button>
+            <button onclick="display('2')" value="2" number>2</button>
+            <button onclick="display('3')" value="3" number>3</button>
+            <button class="last-button" value="+" data-op>+</button>
           </div>
           <div class="row5">
             <button onclick="display('0')">0</button>
             <button>.</button>
-            <button>del</button>
-            <button class="last-button" data-calc>=</button>
+            <button onclick="clearScreen()">del</button>
+            <button class="last-button" data-calc onclick="calculate()">=</button>
           </div>
       </div>
     </div>
