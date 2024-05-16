@@ -2,15 +2,13 @@
 let dataEntry = document.querySelector("[data-entry]");
 
 //number value
-let number = document.querySelector("[number]");
+// let number = document.querySelector("[number]");
 
-// operator variables
-// const dataAdd = document.querySelector('[data-add]')
-// const dataSubtract = document.querySelector('[data-subtract]')
-// const dataMultiply = document.querySelector('[data-multiply]')
-// const dataDivide = document.querySelector('[data-divide]')
-// const dataModulus = document.querySelector('[data-modulus]')
-const dataOp = document.querySelector("[data-op]");
+// operator variable
+const dataOp = document.querySelectorAll("[data-op]");
+
+const dataCalc = document.querySelector('[data-calc]')
+const clear = document.querySelector('[clear]')
 
 let result;
 
@@ -42,37 +40,53 @@ const modulus = (num1, num2) => {
   return num1 % num2;
 };
 
-const clearScreen = () => {
-  dataEntry.value = "";
-  calcArray = [];
-};
+const ;
 
 const calculate = () => {
     console.log(dataOp.value)
+    let num1 = parseFloat(calcArray[0])
+    let num2 = parseFloat(calcArray[2])
   switch (dataOp.value) {
     case "+":
-      result = add(calcArray[0], calcArray[2]);
+      result = add(num1, num2 );
       display(result);
       break;
     case "-":
-      result = subtract(calcArray[0], calcArray[2]);
+      result = subtract(num1, num2);
       display(result);
       break;
     case "*":
-      result = multiply(calcArray[0], calcArray[2]);
+      result = multiply(num1, num2);
       display(result);
       break;
     case "/":
-      result = divide(calcArray[0], calcArray[2]);
+      result = divide(num1, num2);
       display(result);
       break;
     case "%":
-      result = modulus(calcArray[0], calcArray[2]);
+      result = modulus(num1, num2);
       display(result);
       break;
     default:
+      display('Error')
       break;
   }
 };
 
-//give each button a value, parse it in as an argument in the calculate function
+//because they are buttons, one needs a loop
+dataOp.forEach(operator => {
+  operator.addEventListener('click', () => {
+    calcArray.push(dataEntry.value)
+    calcArray.push(operator.value)
+  })
+})
+
+dataCalc.addEventListener('click', () => {
+  calcArray.push(dataEntry.value)
+  calculate()
+})
+
+clear.addEventListener('click', () => {
+  dataEntry.value = "";
+  calcArray = [];
+})
