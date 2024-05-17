@@ -82,3 +82,18 @@ body {
     background-color: var(--primary);
   }
 }
+/* mobile query */
+@media (width < 375px){
+    #calculator-container{
+        width: 15rem;
+    }
+
+    .row1-button{
+        width: 4.3rem;
+    }
+
+    .last-button{
+        float: right;
+
+    }
+}
