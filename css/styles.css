@@ -1,84 +1,84 @@
 *,
 *::before,
-*::after{
-    margin: 0;
-    padding: 0;
+*::after {
+  margin: 0;
+  padding: 0;
 }
 
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+  display: none;
 }
 
-:root{
-    --primary: #C5EBAA;
-    --secondary: #FFBE98;
-    --complimentary: #FFCF96;
-    --light-bg: #FEECE2;
-    --boxShadow: .5vw .5vw .3vw var(--complimentary),
-    .8vw 1vw .2vw var(--secondary),
-    1vw 1vw .2vw rgb(130, 108, 108);
+:root {
+  --primary: #c5ebaa;
+  --secondary: #ffbe98;
+  --complimentary: #ffcf96;
+  --light-bg: #feece2;
 }
 
 #calculator-container {
-    width: 20rem;
-    border: 1px solid;
-    padding: 2rem 1rem;
-    border-radius: 10px;
-    background-color: var(--primary);
-    box-shadow: var(--boxShadow);
+  width: 20rem;
+  border: 1px solid;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  background-color: var(--primary);
+  box-shadow: 0.5vw 0.5vw 0.3vw var(--complimentary),
+  0.8vw 1vw 0.2vw var(--secondary), 1vw 1vw 0.2vw rgb(130, 108, 108);
 }
 
 .input {
-    width: 98%;
-    height: 4rem;
-    margin-bottom: .5rem;
-    border-radius: 10px;
+  width: 98%;
+  height: 4rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
 }
 
 /* do not remove */
-.utilities{
-    display: flex;
+.utilities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.row1-button{
-    width: 20%;
-    margin: .2rem;
-    background-color: var(--secondary);
-}
+.row1-button {
+  width: 5rem;
+  margin: 0.2rem;
+  background-color: var(--secondary);
+  margin: auto;
 
-.row1-button:hover{
-    background-color: var(--light-bg);
-}
-
-button{
-    width: 24%;
-    padding: 1rem;
-    margin-bottom: .3rem;
-    border-radius: 10px;
-    border: 1px solid;
-    background-color: var(--light-bg);
-}
-
-button:hover{
+  &:hover {
     background-color: var(--complimentary);
+  }
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+button {
+  width: 24%;
+  padding: 1rem;
+  margin-bottom: 0.3rem;
+  border-radius: 10px;
+  border: 1px solid;
+  background-color: var(--light-bg);
+
+  &:hover {
+    background-color: var(--secondary);
+  }
 }
 
-.num-operators{
-    margin-top: .6rem;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.last-button{
+.num-operators {
+  margin-top: 0.6rem;
+}
+
+.last-button {
   background-color: var(--complimentary);
-    box-sizing: border-box;
-}
+  box-sizing: border-box;
 
-.last-button:hover{
+  &:hover {
     background-color: var(--primary);
+  }
 }
